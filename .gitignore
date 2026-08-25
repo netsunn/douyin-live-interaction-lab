@@ -2,3 +2,23 @@
 .tts-cache/
 .venv/
 node_modules/
+
+# 运行日志和临时诊断输出
+*.log
+*.log.*
+ws-*.txt
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# 音频分析/候选文件等临时产物
+.audio-analysis/
+.audio-analysis-*/
+audio-candidates/
+
+# 本地编辑器和系统临时文件
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
