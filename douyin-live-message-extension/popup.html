@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        width: 310px;
+        margin: 0;
+        padding: 16px;
+        font: 13px/1.6 system-ui;
+        color: #24212b;
+        background: #faf8ff;
+      }
+      h3 {
+        margin: 0 0 10px;
+        font-size: 16px;
+      }
+      .version {
+        float: right;
+        color: #81788c;
+        font-size: 11px;
+        font-weight: 600;
+      }
+      .state {
+        padding: 10px;
+        border-radius: 10px;
+        background: #fff;
+        border: 1px solid #e5def2;
+      }
+      .status-row {
+        display: flex;
+        align-items: center;
+        margin: 3px 0;
+      }
+      .dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #d95359;
+        margin-right: 7px;
+      }
+      .status-row.ok .dot {
+        background: #37a477;
+      }
+      .receiver-link {
+        display: block;
+        margin: 6px 0 2px 15px;
+        color: #7656ff;
+        font-size: 11px;
+        text-decoration: none;
+      }
+      .meta {
+        margin-top: 7px;
+        color: #756d80;
+      }
+      .filters {
+        margin-top: 10px;
+        padding: 10px;
+        background: #fff;
+        border: 1px solid #e5def2;
+        border-radius: 10px;
+      }
+      .filters-title {
+        font-weight: 750;
+        margin-bottom: 6px;
+      }
+      .filter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 0;
+        color: #51495c;
+      }
+      .switch {
+        position: relative;
+        width: 34px;
+        height: 20px;
+      }
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        inset: 0;
+        border-radius: 20px;
+        background: #cfc8d7;
+        cursor: pointer;
+        transition: 0.18s;
+      }
+      .slider:before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        left: 2px;
+        top: 2px;
+        border-radius: 50%;
+        background: #fff;
+        transition: 0.18s;
+        box-shadow: 0 1px 3px #999;
+      }
+      .switch input:checked + .slider {
+        background: #7656ff;
+      }
+      .switch input:checked + .slider:before {
+        transform: translateX(14px);
+      }
+      .message {
+        margin-top: 10px;
+        padding: 9px;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #eee8f5;
+        word-break: break-all;
+        white-space: pre-line;
+      }
+      .error {
+        color: #ba3d45;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>抖音直播消息连接器 <span class="version" id="version"></span></h3>
+    <div class="state">
+      <div class="status-row" id="receiverState">
+        <span class="dot"></span><b id="receiverLabel">Python接收器检测中</b>
+      </div>
+      <a
+        class="receiver-link"
+        href="http://127.0.0.1:8890/health"
+        target="_blank"
+        >http://127.0.0.1:8890</a
+      >
+      <div class="status-row" id="pageState">
+        <span class="dot"></span><b id="pageLabel">抖音页面监听未连接</b>
+      </div>
+      <div class="meta" id="count">已接收 0 条</div>
+    </div>
+    <div class="message" id="message">
+      请打开抖音直播页面，并启动Python接收器。
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

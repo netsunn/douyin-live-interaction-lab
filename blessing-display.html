@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>直播间 Canvas 打印纸 · 9:16</title>
+    <link rel="stylesheet" href="blessing-display.css?v=20260822-kill-notice-fix" />
+    <link
+      rel="stylesheet"
+      href="message-controls.css?v=20260821-damage-popup"
+    />
+  </head>
+  <body>
+    <div class="studio-shell">
+      <aside class="control-rail" aria-label="直播控制区域">
+        <div class="rail-brand">
+          <span>LIVE DESK</span><strong>直播控制台</strong
+          ><small>此区域不会进入右侧直播画面</small>
+        </div>
+        <header class="scene-status">
+          <div><i></i><b id="connectionState">连接直播间中</b></div>
+          <span>已打印 <strong id="printCount">0</strong> 条</span
+          ><span id="queueState">待播报 0 条</span
+          ><span id="printQueueState">待打印 0 条</span>
+        </header>
+        <div class="message-controls" aria-label="消息接收控制">
+          <div class="control-head">
+            <span class="control-light"></span><b>消息接收</b>
+          </div>
+          <label
+            ><span>聊天</span
+            ><input type="checkbox" data-message-type="comment" /><i></i
+          ></label>
+          <label
+            ><span>进场</span
+            ><input type="checkbox" data-message-type="member" /><i></i
+          ></label>
+          <label
+            ><span>礼物</span
+            ><input type="checkbox" data-message-type="gift" /><i></i
+          ></label>
+          <label
+            ><span>关注</span
+            ><input type="checkbox" data-message-type="follow" /><i></i
+          ></label>
+          <label
+            ><span>点赞</span
+            ><input type="checkbox" data-message-type="like" /><i></i
+          ></label>
+          <label
+            ><span>粉丝团</span
+            ><input type="checkbox" data-message-type="fansclub" /><i></i
+          ></label>
+          <div class="control-separator"></div>
+          <label
+            ><span>打印声音</span
+            ><input id="printerSoundToggle" type="checkbox" /><i></i
+          ></label>
+          <label
+            ><span>打印用户头像</span
+            ><input id="avatarToggle" type="checkbox" /><i></i
+          ></label>
+          <label
+            ><span>实体打印机</span
+            ><input id="physicalPrinterToggle" type="checkbox" /><i></i
+          ></label>
+          <div class="control-separator"></div>
+          <div class="simulation-head">
+            <b>模拟互动测试</b><small>仅本地画面与播报</small>
+          </div>
+          <div class="simulation-buttons" aria-label="模拟互动测试按钮">
+            <button type="button" data-simulate="member">模拟进场</button>
+            <button type="button" data-simulate="comment">模拟聊天</button>
+            <button type="button" data-simulate="like">模拟点赞</button>
+            <button type="button" data-simulate="follow">模拟关注</button>
+            <button type="button" data-simulate="fansclub">模拟粉丝团</button>
+            <button type="button" data-simulate="gift">模拟礼物</button>
+          </div>
+          <label class="simulation-auto-toggle"
+            ><span>随机模拟互动</span
+            ><input id="simulationAutoToggle" type="checkbox" /><i></i
+          ></label>
+          <div id="simulationAutoState" class="simulation-auto-state">
+            已关闭
+          </div>
+        </div>
+        <div class="rail-tip">
+          <b>画面采集提示</b><span>直播软件只需框选右侧 9:16 区域。</span>
+        </div>
+      </aside>
+      <main class="print-scene" id="printScene">
+        <canvas id="printCanvas" aria-label="直播间实时打印纸"></canvas>
+        <div class="avatar-marbles" id="avatarMarbles" aria-hidden="true"></div>
+        <div
+          class="kill-notice"
+          id="killNotice"
+          aria-live="polite"
+          aria-label="最高连杀通知"
+        ></div>
+        <aside class="recent-interactions" aria-label="最近互动用户">
+          <b>最近互动</b>
+          <ol id="recentInteractions"></ol>
+        </aside>
+        <aside class="like-leaderboard" aria-label="实时评分前三名">
+          <div class="rank-title">实时评分 TOP 3<i></i></div>
+          <ol id="likeLeaderboard"></ol>
+        </aside>
+        <div class="sr-only" id="ariaLog" aria-live="polite"></div>
+        <button class="start-overlay" id="startDisplay" type="button">
+          <span class="start-icon">▤</span><strong>开启打印效果</strong
+          ><small>启用滋滋打印声和礼物感谢语音</small>
+        </button>
+      </main>
+    </div>
+    <script src="blessing-display.js?v=20260822-kill-notice"></script>
+  </body>
+</html>

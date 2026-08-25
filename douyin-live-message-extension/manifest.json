@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "抖音直播消息连接器",
+  "version": "1.16.0",
+  "description": "读取电脑端抖音直播页面已显示的公开评论，并发送到本地无人直播控制台。",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://live.douyin.com/*",
+    "http://127.0.0.1:8890/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://live.douyin.com/*"],
+      "js": ["page-hook.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://live.douyin.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_title": "抖音直播消息连接器",
+    "default_popup": "popup.html"
+  }
+}

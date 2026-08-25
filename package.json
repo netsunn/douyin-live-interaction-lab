@@ -1,0 +1,11 @@
+{
+  "name": "无人直播控制台",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.21.3"
+  }
+}

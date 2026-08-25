@@ -1,0 +1,4 @@
+.env.local
+.tts-cache/
+.venv/
+node_modules/

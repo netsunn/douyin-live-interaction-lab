@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
+  <defs>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f4d54b"/><stop offset="1" stop-color="#c28b08"/></linearGradient>
+    <linearGradient id="paper" x1="0" x2="1"><stop stop-color="#fffdf3"/><stop offset="1" stop-color="#f4ead0"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#5b2808" flood-opacity=".35"/></filter>
+  </defs>
+  <rect width="1080" height="1920" fill="#8f201b"/>
+  <rect x="52" y="48" width="976" height="1824" rx="34" fill="url(#paper)" filter="url(#shadow)"/>
+  <path d="M52 48h535L470 1872H52z" fill="url(#gold)"/>
+  <path d="M587 48h441v1824H470z" fill="#fffdf5" opacity=".92"/>
+  <text x="540" y="190" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="82" font-weight="900" fill="#8d271c">互动加积分</text>
+  <text x="540" y="266" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="32" fill="#9a6d22">互动越多，头像升级越快</text>
+  <g font-family="Microsoft YaHei, sans-serif" font-weight="800">
+    <circle cx="230" cy="455" r="88" fill="#ff4d67"/><path d="M230 505C153 445 177 390 218 405c8 3 12 12 12 12s4-9 12-12c41-15 65 40-12 100z" fill="#fff"/>
+    <text x="690" y="450" font-size="52" fill="#6e331e">点赞一次</text><text x="690" y="515" font-size="50" fill="#db3d23">+1 分</text>
+    <circle cx="230" cy="735" r="88" fill="#4e9bd6"/><path d="M185 698h90a18 18 0 0 1 18 18v48a18 18 0 0 1-18 18h-45l-30 25v-25h-15a18 18 0 0 1-18-18v-48a18 18 0 0 1 18-18z" fill="#fff"/>
+    <text x="690" y="730" font-size="52" fill="#6e331e">聊天一次</text><text x="690" y="795" font-size="50" fill="#db3d23">+1 分</text>
+    <circle cx="230" cy="1015" r="88" fill="#f0a629"/><path d="m230 955 18 37 41 6-30 29 7 41-36-19-36 19 7-41-30-29 41-6z" fill="#fff"/>
+    <text x="690" y="1010" font-size="52" fill="#6e331e">关注主播</text><text x="690" y="1075" font-size="50" fill="#db3d23">+10 分</text>
+    <circle cx="230" cy="1295" r="88" fill="#a65ed1"/><path d="M185 1260h90v67h-90z" fill="#fff"/><path d="M175 1260h110v-25H175z" fill="#ffe083"/><circle cx="230" cy="1293" r="20" fill="#a65ed1"/>
+    <text x="690" y="1290" font-size="46" fill="#6e331e">加入粉丝团</text><text x="690" y="1355" font-size="50" fill="#db3d23">+20 分</text>
+    <circle cx="230" cy="1575" r="88" fill="#f26445"/><path d="M177 1535h106v82H177z" fill="#fff"/><path d="m177 1535 53 42 53-42" fill="none" stroke="#f26445" stroke-width="10"/><path d="M230 1474v35m-18-18 18 18 18-18" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+    <text x="690" y="1570" font-size="48" fill="#6e331e">送礼物</text><text x="690" y="1635" font-size="46" fill="#db3d23">钻石 × 10 分</text>
+  </g>
+  <rect x="180" y="1740" width="720" height="74" rx="37" fill="#8d271c" opacity=".94"/>
+  <text x="540" y="1790" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="30" fill="#fff5d4">实时评分 TOP 3 · 近 5 分钟统计</text>
+</svg>

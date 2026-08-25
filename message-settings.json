@@ -1,0 +1,11 @@
+{
+  "types": {
+    "comment": true,
+    "member": true,
+    "gift": true,
+    "follow": true,
+    "like": true,
+    "fansclub": true
+  },
+  "avatars": true
+}

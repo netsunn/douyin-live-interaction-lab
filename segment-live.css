@@ -1,0 +1,1 @@
+.segment-card{font:11px/1.45 Manrope,'Microsoft YaHei',sans-serif;text-align:left;cursor:pointer;transition:.18s ease}.segment-card:hover{border-color:#8cbdb2;background:#f3faf7}.segment-card.active{border-color:var(--teal);background:#e9f6f1;box-shadow:inset 3px 0 0 var(--lime)}
